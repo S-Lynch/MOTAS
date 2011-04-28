@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tag %> <!--> Is a built in Rails method for securing the app against CSRF <!/-->
+  <%= render 'layouts/stylesheets' %> <!--> Get the pages from layouts/stylessheets and use them here however this does not cae about the _ <!/-->
+  <%= javascript_include_tag :defaults %>
+</head>
+<body>
+  <div class ="container">
+
+   <%= render 'layouts/header' %>
+
+    <section class ="round">
+
+      <%= yield %>
+    </section>
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<!--> Contains the stylesheets required by MOTAS that are called using a Rails partial in application.html.erb <!/--> 
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %> <!--> Uses the Rails command _link_tag and file location to add the Blueprint CSS files <!/-->
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %> <!--> one for printing to the screen and one for <!/-->
+     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif] Blueprint has a special file used for IE called that can be used for the discrepencies ie.css-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>

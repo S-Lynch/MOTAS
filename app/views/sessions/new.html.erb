@@ -1,0 +1,22 @@
+<h1>Sign In to MOTAS</h1>
+
+<% if flash[:notice] -%>
+  <div id='error_notice'><%= flash[:notice] -%></div>
+<% end -%>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+<div class="field">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+<div class="field">
+  <%= f.label :password%>
+  <%= f.text_field :password %>
+</div>
+<div class="actions">
+  <%= f.submit "Sign in to MOTAS" %>
+</div>
+<% end %>
+
+<p> New to MOTAS, want to receive a reminder for your M.O.T? <%= link_to "Sign Up", signup_path %> </p> 
+

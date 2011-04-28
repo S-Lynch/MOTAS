@@ -1,0 +1,11 @@
+<%= form_for @mot do |f| %>
+<%= render 'shared/mot_error_messages' %>
+<div class="field">
+<%= f.label :mot_date %><br />
+<%= f.date_select :mot_date %>
+</div>
+<div class="actions">
+  <%= f.submit "Save you M.O.T date" %>
+</div>
+<% end %>
+

@@ -1,0 +1,212 @@
+/* 
+    Document   : custom
+    Created on : 20-Apr-2011, 14:58:06
+    Author     : Stevies
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+.container {
+  width: 710px;
+}
+
+body {
+  background: #cff;
+}
+
+header {
+  padding-top: 20px;
+}
+
+header img {
+  padding: 1em; /* Puts a border aound the image to clean it up a bit */
+  background: #fff; /* with a whte background */ 
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+/* The following styles the links to other pages and thier location*/
+
+nav {
+    float: right;
+}
+
+nav {
+    background-color: whitesmoke;
+    padding: 0 0.7em;
+    white-space: nowrap
+}
+
+nav ul {
+    margin: 0;
+        padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+        display: inline-block;
+        padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* M.O.T signup button a. is a link tag*/
+
+a.signup_button {
+  margin-left: auto;
+   margin-right: auto;
+   display: block;
+   text-align: center;
+    width: 190px;
+    color: #fff;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px; /* Provides the width away from the text */ 
+}
+
+.round {
+  -moz-border-radius:    20px; /* moz is used for firefox browsers so it can display the round edges */
+ /* -webkit-border-radius: 10px; */
+  -border-radius:         10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
+}
+/* CSS for errors adapted from the Rails Scaffold CSS */
+
+.field_with_errors {
+margin-top: 10px;
+padding: 2px;
+background-color: red;
+display: table;
+}
+
+.field_with_errors {
+color: #fff;
+}
+
+#error_explanation {
+width: 400px;
+border: 2px solid red;
+padding: 7px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#notice {
+width: 600px;
+font-weight: bold;
+border: 2px green;
+padding: 7px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+background-color: green;
+}
+
+#error_notice {
+width: 600px;
+font-weight: bold;
+border: 2px red;
+padding: 7px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+background-color: red;
+}
+
+ul.MOTAS_Users {
+margin-top: 1em;
+}
+
+.MOTAS_Users li {
+list-style: none
+}
+
+/* For Mots */
+
+h1.mot {
+    margin-bottom: 0.3em;
+}
+
+table.mots {
+    margin-top: 1em;
+}
+
+table.mots tr {
+    height: 70px;
+}

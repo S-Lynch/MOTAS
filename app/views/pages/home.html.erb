@@ -1,0 +1,17 @@
+<h1> MOTAS HomePage </h1> 
+<% if signed_in? %>
+<table class="mot_enter">
+  <tr>
+    <td class="main">
+      <h1 class="M.O.T"> Please enter you M.O.T date
+      </h1>
+      <%=  render 'shared/mot_form' %>
+    </td>
+  </tr>
+</table>
+<% else %>
+
+
+
+<%= link_to "Sign up to book your M.O.T Reminder(It's Free)", signup_path, :class => "signup_button round" %>
+<% end %>

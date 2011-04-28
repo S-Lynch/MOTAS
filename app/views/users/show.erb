@@ -1,0 +1,27 @@
+<tr>
+<td class="main_mots">
+
+<% if flash[:notice] -%>
+  <div id='notice'><%= flash[:notice] -%></div>
+<% end -%>
+<h1> Hi </h1> <%= @user.name %>
+<h1> Your current e-mail is: </h1> <p> <%=@user.email%></p>
+</td>
+
+<td class="mots">
+      <% unless @user.mots.empty? %>
+        <table class="mots" summary="Your booked M.O.T's">
+          <%= render @mots %>
+        </table>
+        <%= will_paginate @mots %>
+      <% end %>
+</td>
+</tr>
+<!-->
+<td class="sidebar round">
+   <strong>Name</strong> <%= @user.name %><br />
+   <strong>Mots</strong> <%= @user.mots.count %>
+    </td>
+  </tr>
+</table>
+<!/-->
