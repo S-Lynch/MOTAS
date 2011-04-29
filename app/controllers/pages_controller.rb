@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
       if signed_in?
-      @mot = Mot.new
+      @mot = Mot.new if signed_in?
     end
   end
 

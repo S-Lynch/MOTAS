@@ -19,7 +19,7 @@ root {
 }
 
 body {
-  background: #cff;
+  background: #778899;
 }
 
 header {
@@ -65,7 +65,7 @@ nav {
 }
 
 nav {
-    background-color: whitesmoke;
+    background-color: #00BFFF;
     padding: 0 0.7em;
     white-space: nowrap
 }

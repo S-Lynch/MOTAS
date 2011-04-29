@@ -1,13 +1,17 @@
 SampleMOTAS::Application.routes.draw do
+
   get "sessions/new"
 
-resources :users
+resources :users # needed for the RESTful architecture by adding the users controller as a resource which adds the controller actions
+resources :mots
 # Limits the actions (methods) that can be performed
 resources :sessions, :only => [:new, :create, :destroy]
 resources :mots, :only => [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  # The named routes that are attached to the corresponding controller and view
+match '/mot', :to => 'mots#create'
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'
 match '/signout', :to => 'sessions#destroy'
@@ -17,6 +21,8 @@ match '/help', :to => 'pages#help' # In Rails this is called a named route
 
     # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  # 
+  # routes to the first page to display to the user upon request 
    root :to => 'pages#home'
 
   # Sample of regular route:
