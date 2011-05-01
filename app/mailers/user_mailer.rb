@@ -8,6 +8,6 @@ class UserMailer < ActionMailer::Base
   #  attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
    # mail(:to => "#{user.name} <#{user.email}>", :subject => "Your M.O.T reminder")
 #   mail(:to => user.email, :subject => "Registered")
-    mail(:to => "#{user.name} <#{user.email}>", :subject => "Registered")
+    mail(:to => "#{@user.name} <#{@user.email}>", :subject => "Registered")
   end
 end
