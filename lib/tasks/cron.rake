@@ -26,9 +26,9 @@ task :cron => :environment do
  # end
 
   if Time.now.hour == 0 # run at midnight
-    puts "Sending M.O.T reminders..."
-    Mot.check_mots
+    puts "Sending M.O.T reminders..." # start of the cron
+    Mot.check_mots # calls the check_mots method
     #insert the sending of e-mail stuff
-    puts "done"
+    puts "done" # end of the cron
   end
 end

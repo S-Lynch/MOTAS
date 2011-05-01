@@ -1,4 +1,5 @@
 about=List versions of all Rails frameworks and the environment
+cron=This task is called by the Heroku cron add-on
 db\:abort_if_pending_migrations=
 db\:charset=
 db\:collation=

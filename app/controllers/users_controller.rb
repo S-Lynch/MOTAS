@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user]) #params from the database table users but in Rails it has the singular and plural naming conventions
      if @user.save
       # add the mailer method
-      UserMailer.registration_confirmation(@user).deliver #The MotReminder mailer.mot_reminder method and view with the user object
+       UserMailer.registration_confirmation(@user).deliver #The MotReminder mailer.mot_reminder method and view with the user object
        sign_in @user
        flash[:notice] = fading_flash_message("You Have Successfully Signed up to MOTAS, Please book your M.O.T", 5)
        redirect_to @user
