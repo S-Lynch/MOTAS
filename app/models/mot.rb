@@ -8,7 +8,7 @@ class Mot < ActiveRecord::Base
 
   default_scope :order => 'mots.created_at DESC'
 
-  validates :mot_date, :presence => true 
+ # validates :mot_date, :presence => true
   validates :user_id, :presence => true
 
 end

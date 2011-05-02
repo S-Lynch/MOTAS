@@ -5,8 +5,10 @@ class UsersController < ApplicationController
   before_filter :admin_user,   :only => :destroy
   
   def index
-    @title = "All MOTAS Users"
+    @title = "All MOTAS bookings"
     @users = User.paginate(:page => params[:page]) #paginate used to show the list of users across different pages
+    @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
+   # @mots = @user.mots.paginate(:page => params[:page])
   end
 
   def show

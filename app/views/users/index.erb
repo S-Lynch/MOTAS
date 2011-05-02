@@ -1,8 +1,20 @@
-<h1> All Current MOTAS Users:</h1>
+<h1> All Current MOTAS bookings:</h1>
 
-<%= will_paginate %>
-<ul class="users">
-    <%= render @users %>
-</ul>
-
-<%= will_paginate %>
+<div id="calendar">
+  <h2 id="month">
+   <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") %>
+    <%=h @date.strftime("%B %Y") %>
+    <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
+  </h2>
+  <% calendar_for @mots, :year => @date.year, :month => @date.month do |calendar| %>
+  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')  %>
+  <% calendar.day(:day_method => :mot_date) do |date, mots| %>
+  <%= date.day %>
+  <ul>
+    <% for mot in mots %>
+    <li><%= link_to h(user.mots.mot_date), mot %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  <% end %>
+</div>

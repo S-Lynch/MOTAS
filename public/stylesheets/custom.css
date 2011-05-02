@@ -11,9 +11,11 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
+
 root { 
     display: block;
 }
+
 .container {
   width: 710px;
 }
@@ -38,9 +40,11 @@ section {
   background: #fff;
 }
 
+
 section h1 {
   font-size: 200%;
 }
+
 
 /* Links */
 
@@ -110,9 +114,9 @@ a.signup_button {
 }
 
 .round {
-  -moz-border-radius:    20px; /* moz is used for firefox browsers so it can display the round edges */
+  -moz-border-radius:20px; /* moz is used for firefox browsers so it can display the round edges */
  /* -webkit-border-radius: 10px; */
-  -border-radius:         10px;
+  -border-radius:10px;
 }
 
 footer {
@@ -189,6 +193,7 @@ margin-bottom: 20px;
 background-color: red;
 }
 
+
 ul.MOTAS_Users {
 margin-top: 1em;
 }
@@ -196,6 +201,7 @@ margin-top: 1em;
 .MOTAS_Users li {
 list-style: none
 }
+
 
 /* For Mots */
 
@@ -209,4 +215,69 @@ table.mots {
 
 table.mots tr {
     height: 70px;
+}
+
+/* CSS for M.O.T calendar */
+
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar td,
+#calendar th {
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+#calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+#calendar .notmonth {
+  color: #CCC;
+}
+
+#calendar #month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#calendar #month a, #calendar #month a:hover {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #999;
+}
+
+#calendar .today {
+  background-color: #D7F2FF;
+}
+
+#calendar ul {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+#calendar li {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
 }
