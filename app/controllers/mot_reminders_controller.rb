@@ -3,11 +3,11 @@ class MotRemindersController < ApplicationController
   def check_mots
     require 'time'
 
-    # WORKS IN POSTGRES
+    
     @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
  #   @mots = Mot.find(:all, :order => "date")
 
-
+    #iterate through each mot abd do the following
     @mots.each do |mot|
 
       if mot.mot_date-1.hour < Time.now.utc

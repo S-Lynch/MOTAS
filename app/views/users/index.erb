@@ -6,15 +6,12 @@
     <%=h @date.strftime("%B %Y") %>
     <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
   </h2>
-  <% calendar_for @mots, :year => @date.year, :month => @date.month do |calendar| %>
+
+  <% calendar_for @mot, :year => @date.year, :month => @date.month do |calendar| %>
   <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')  %>
-  <% calendar.day(:day_method => :mot_date) do |date, mots| %>
+  <% calendar.day(:day_method => :name) do |date, mot| %>
   <%= date.day %>
-  <ul>
-    <% for mot in mots %>
-    <li><%= link_to h(user.mots.mot_date), mot %></li>
-    <% end %>
-  </ul>
+  
   <% end %>
-  <% end %>
+<% end %>
 </div>

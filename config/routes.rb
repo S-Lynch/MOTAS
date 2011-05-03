@@ -15,10 +15,10 @@ match '/mot', :to => 'mots#create'
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'
 match '/signout', :to => 'sessions#destroy'
-match '/contact', :to => 'pages#contact' # creates a link to the pages controller and the contact view (after executing the code with the contact controller method in pages controller.
+match '/contact', :to => 'pages#contact' # creates a link to the pages controller and the contact view.
 match '/about', :to => 'pages#about' # the link is based on the incoming URL in this case '/about'. 
 match '/help', :to => 'pages#help' # In Rails this is called a named route
-
+match '/bookings', :to => 'mots#index'
     # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # 
