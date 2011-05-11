@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   
   include SessionsHelper
 
-# The JavaScript for the fading 'flash' messages
+# fading 'flash' messages
   include ActionView::Helpers::RawOutputHelper
 def fading_flash_message(text, seconds=3)
   raw text +

@@ -1,7 +1,7 @@
 class MotsController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
-  attr_accessor
+#  attr_accessor
 
   def create
   @mot = current_user.mots.build(params[:mot])
@@ -9,26 +9,30 @@ class MotsController < ApplicationController
     flash[:success] = "Your M.O.T has been saved"
     redirect_to current_user 
    else
+ 
     render 'pages/home'
   end
   end
 
+
   def index
       @title = "All MOTAS bookings"
-      @users = User.find(:all)
-   #    @users = User.mot_date
-      @mots = Mot.find(:all)
-    #  @mots = @user.mots.paginate(:page => params[:page])
-     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
+     @users = User.find(:all)
+     @mots = Mot.find(:all)
+    Mot.joins(:users).where('mots.mot_date is not null')
+  # User.joins(:mots).where('users.mot_date')
+  #Mot.joins(:mots)
+    # @users.User.find(:all, :conditions => "...", :include => :mot)
+    #  @users = User.joins(:mot).where(:mot => {:mot_date => true})
+   # @users = User.joins(:mot).where('mots.mot_date is not null')
+# @users = User.find(:all, :include => :mot_date)
+    @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
     #  @date = params[:month] ? Date.parse(params[:month]) : Date.today
-     # @mots = @user.mots.find(:all)
-     # @mots = @user.mots.paginate(:page => params[:page])
-     
   end
 
   def destroy
-   @mot.destroy
-   redirect_to current_user  #_back or root_path
+   @mot.destroy(params[:id])
+   redirect_to current_user
   end
 
   private

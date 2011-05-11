@@ -10,7 +10,7 @@ class MotRemindersController < ApplicationController
     #iterate through each mot abd do the following
     @mots.each do |mot|
 
-      if mot.mot_date-1.hour < Time.now.utc
+      if mot.mot_date-1.day < Time.now.utc
         #send e-mail
       MotMailer.mot_reminder(@mot).deliver #or (@user) ?
 

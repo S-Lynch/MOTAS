@@ -14,6 +14,7 @@ resources :mots, :only => [:create, :destroy]
 match '/mot', :to => 'mots#create'
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'
+match '/motdelete', :to => 'mots#destroy'
 match '/signout', :to => 'sessions#destroy'
 match '/contact', :to => 'pages#contact' # creates a link to the pages controller and the contact view.
 match '/about', :to => 'pages#about' # the link is based on the incoming URL in this case '/about'. 

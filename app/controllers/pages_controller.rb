@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     @title = "Home"
       if signed_in?
       @mot = Mot.new if signed_in?
-    end
+      end
   end
 
   def contact

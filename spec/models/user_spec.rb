@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 
   before(:each) do
-    @attr = { :name => "Test User", :email => "testemail@email.com", :password => "password", :password_confirmation => "password"}
+    @attr = { :name => "Test User", :email => "example@example.com", :password => "password", :password_confirmation => "password"}
   end
 
   it "should save this instance of the user" do

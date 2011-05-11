@@ -1,8 +1,10 @@
 # require 'digest'
  #validates all data relating to the User that is to be stored and for encrypting and salting the password
 class User < ActiveRecord::Base
-  attr_accessor :password
+  attr_accessor :password, :mot_date
   attr_accessible :name, :email, :password, :password_confirmation
+
+ # accepts_nested_attributes_for :mot_date
 
   # Used to set the relationship to the corresponding mots table
   has_many :mots, :dependent => :destroy
@@ -43,6 +45,10 @@ class User < ActiveRecord::Base
   def self.authenticate_with_salt(id, cookie_salt)
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
+  end
+
+  def feed
+   mots
   end
 
   private
