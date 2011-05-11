@@ -12,15 +12,6 @@ SampleMOTAS::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
-  ActionMailer::Base.smtp_settings = {
-:address => "smtp.gmail.com",
-:port => 587, #for gmail,
-:domain => "gmail.com",
-:user_name => "motasreminder",
-:password => "tariknicksteve6",
-:authentication => "plain",
-:enable_starttls_auto => true
-}
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
