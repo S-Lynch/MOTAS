@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       #The MotReminder mailer.mot_reminder method and view with the user object
        sign_in @user
      #  UserMailer.registration_confirmation(@user).deliver
-        UserMailer.deliver_registration_confirmation(self)
+        UserMailer.deliver_registration_confirmation(@user)
 
        flash[:notice] = fading_flash_message("You Have Successfully Signed up to MOTAS, Please book your M.O.T", 5)
        redirect_to @user
