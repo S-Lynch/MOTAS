@@ -45,7 +45,6 @@ doc\:clobber_plugins=
 doc\:clobber_rails=
 doc\:guides=
 doc\:plugins=
-doc\:plugins\:gmail_smtp=
 doc\:plugins\:table_builder=
 doc\:rails=
 doc\:reapp=
