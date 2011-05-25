@@ -5,15 +5,15 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 #Rake 0.9 fix 
-module ::MOTAS
-  class Application
-    include Rake::DSL
-  end
-end
-
-module ::RakeFileUtils
-  extend Rake::FileUtilsExt
-end
+#module ::MOTAS
+#  class Application
+#    include Rake::DSL
+#  end
+#end
+#
+#module ::RakeFileUtils
+#  extend Rake::FileUtilsExt
+#end
 
 SampleMOTAS::Application.load_tasks
 
