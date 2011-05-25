@@ -4,6 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
+#Rake 0.9 fix 
 module ::MOTAS
   class Application
     include Rake::DSL

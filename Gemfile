@@ -7,6 +7,7 @@ gem 'rails', '3.0.6'
 
 gem 'sqlite3', :group => :development
 gem 'will_paginate', '3.0.pre2'
+gem 'rake', '0.8.7'
 
 group :development do
   gem 'rspec-rails', '2.5.0'
