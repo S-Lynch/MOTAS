@@ -22,7 +22,7 @@ task :cron => :environment do
   #if Time.now.hour == 0 # run at midnight
     puts "Sending M.O.T reminders..." # start of the cron
  #   Mot.check_mots # calls the check_mots method
-    MotReminders.check_mots
+    MotReminder.check_mots
   #  User.check_mots
     #User.check_mots
     #insert the sending of e-mail stuff
