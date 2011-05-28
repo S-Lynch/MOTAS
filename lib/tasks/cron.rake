@@ -18,7 +18,7 @@
 #end
 
 desc "This task is called by the Heroku cron add-on"
-task :check_mots => :environment do
+task :cron => :environment do
   #if Time.now.hour == 0 # run at midnight
     puts "Sending M.O.T reminders..." # start of the cron
  #   Mot.check_mots # calls the check_mots method
