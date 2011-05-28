@@ -1,5 +1,5 @@
 # require 'digest'
-#require 'rake'
+require 'rake'
  #validates all data relating to the User that is to be stored and for encrypting and salting the password
 class User < ActiveRecord::Base
   attr_accessor :password, :mot_date
@@ -44,10 +44,10 @@ class User < ActiveRecord::Base
      #UserMailer.deliver_registration_confirmation(@user)
 
       elsif mot.mot_date-1.day < Time.now.utc
-
       end
     end
-  end
+   end
+
 
  def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
