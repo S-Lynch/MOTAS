@@ -17,6 +17,7 @@ class Mot < ActiveRecord::Base
    # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
  #   @mots = Mot.find(:all, :order => "date")
      @mots = Mot.find(:all)
+     @user = User.find(:all)
 # Find all where mot date Date.today < 7.days from _today
     #iterate through each mot abd do the following
   #  @mots.each do |mot|
