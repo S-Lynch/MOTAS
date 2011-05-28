@@ -27,8 +27,8 @@ class User < ActiveRecord::Base
 #call the below private method before saving to encrypt the password
   before_save :encrypt_password
 
-  def check_mots
-    User.check_mots
+  def User.check_mots
+    
     require 'time'
 
 
