@@ -23,7 +23,7 @@ class Mot < ActiveRecord::Base
 
     #  if mot.mot_date-1.day < Time.now.utc
         #send e-mail
-      MotMailer.deliver_mot_reminder(@users, @mot)
+      MotMailer.deliver_mot_reminder(@send)
      #UserMailer.deliver_registration_confirmation(@user)
 
    #   elsif mot.mot_date-1.day < Time.now.utc
