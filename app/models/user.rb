@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
  #   @mots = Mot.find(:all, :order => "date")
 
     #iterate through each mot abd do the following
-    @mots.each do |mot|
+   # @mots.each do |mot|
 
       if mot.mot_date-1.day < Time.now.utc
         #send e-mail
