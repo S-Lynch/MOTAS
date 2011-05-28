@@ -90,6 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   rails (= 3.0.6)
+  rake (= 0.8.7)
   rspec (= 2.5.0)
   rspec-rails (= 2.5.0)
   sqlite3
