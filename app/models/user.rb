@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
 
-   def check_mots
+   def User.check_mots
     require 'time'
 
 

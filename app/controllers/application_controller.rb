@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   include SessionsHelper
-  include check_mots
 
 # fading 'flash' messages
   include ActionView::Helpers::RawOutputHelper
