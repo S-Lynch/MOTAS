@@ -27,25 +27,25 @@ class User < ActiveRecord::Base
 #call the below private method before saving to encrypt the password
   before_save :encrypt_password
 
-  def User.check_mots
-    require 'time'
-
-
-   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
- #   @mots = Mot.find(:all, :order => "date")
-
-    #iterate through each mot abd do the following
-   # @mots.each do |mot|
-
-      if mot.mot_date-1.day < Time.now.utc
-        #send e-mail
-      MotMailer.deliver_mot_reminder(@mot)
-     #UserMailer.deliver_registration_confirmation(@user)
-
-      elsif mot.mot_date-1.day < Time.now.utc
-   #   end
-    end
-  end
+#  def User.check_mots
+#    require 'time'
+#
+#
+#   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
+# #   @mots = Mot.find(:all, :order => "date")
+#
+#    #iterate through each mot abd do the following
+#    @mots.each do |mot|
+#
+#      if mot.mot_date-1.day < Time.now.utc
+#        #send e-mail
+#      MotMailer.deliver_mot_reminder(@mot)
+#     #UserMailer.deliver_registration_confirmation(@user)
+#
+#      elsif mot.mot_date-1.day < Time.now.utc
+#    end
+#    end
+#  end
 
  def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
