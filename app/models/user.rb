@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
     require 'time'
 
 
-   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
+    @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
  #   @mots = Mot.find(:all, :order => "date")
 
     #iterate through each mot abd do the following
