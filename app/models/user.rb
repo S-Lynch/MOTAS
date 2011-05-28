@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
      #UserMailer.deliver_registration_confirmation(@user)
 
       elsif mot.mot_date-1.day < Time.now.utc
-      end
+   #   end
     end
   end
 
