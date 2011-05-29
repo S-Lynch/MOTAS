@@ -10,5 +10,4 @@ class MotMailer < ActionMailer::Base
     #mail(:to => user.email, :subject => "Your M.O.T renewal is due")
     mail(:to => "#{@user.name} <#{@user.email}>", :subject => "Your M.O.T is due for renewal soon")
   end
-
 end
