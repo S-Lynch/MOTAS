@@ -4,6 +4,8 @@ class MotMailer < ActionMailer::Base
   def mot_reminder(user, mot)
     @user = User.find(:all)
     @mots = Mot.find(:all)
+    @user = user
+    @mot = mot
     @send = Mot.joins(:users)
     #mail(:to => user.email, :subject => "Your M.O.T renewal is due")
     mail(:to => "#{@user.name} <#{@user.email}>", :subject => "Your email is due for renewal soon")
