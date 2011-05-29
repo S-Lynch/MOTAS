@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
 #      MotMailer.deliver_mot_reminder(@mot)
-     Mot.deliver_mot_reminder(@user, @mot)
+       MotMailer.deliver_mot_reminder(@user, @mot)
 #
 #      elsif mot.mot_date-1.day < Time.now.utc
 #    end
