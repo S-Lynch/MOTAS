@@ -6,7 +6,7 @@ class MotMailer < ActionMailer::Base
     @mot = mot
     @send = Mot.joins(:users)
     #mail(:to => user.email, :subject => "Your M.O.T renewal is due")
-    mail(:to => "#{@send.name} <#{@send.email}>", :subject => "Your email is due for renewal soon")
+    mail(:to => "#{@user.name} <#{@user.email}>", :subject => "Your email is due for renewal soon")
   end
 
 end
