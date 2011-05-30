@@ -34,16 +34,16 @@ class User < ActiveRecord::Base
 #   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
 # #   @mots = Mot.find(:all, :order => "date")
     # @send = User.joins(:mots)
-    @user = User.find(:all)
+    @users = User.find(:all)
     @mots = Mot.find(:all)
 #    #iterate through each mot abd do the following
 #
-   @user.each do |user|
-#
+   @users.each do |user|
+ @mot = Mot.find(:user)
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
 #      MotMailer.deliver_mot_reminder(@mot)
-       MotMailer.deliver_mot_reminder(user)
+       MotMailer.deliver_mot_reminder(user, mot)
 #
 #      elsif mot.mot_date-1.day < Time.now.utc
 #    end
