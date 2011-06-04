@@ -1,6 +1,6 @@
 <!--> This file contains the body of the e-mail <!/-->
 <p>Hi <%= @user[0].name %></p>
 
-<p> Your M.O.T is due for renewal on<b> <%= Date::MONTHNAMES[@mot.mot_date.mon] %> <%= @mot.mot_date.day %>, <%= @mot.mot_date.year %>  </b> </p>
+<p> Your M.O.T is due for renewal on<b> <%= Date::MONTHNAMES[@mot.mot_date.day] %> <%= @mot.mot_date.mon %>, <%= @mot.mot_date.year %>  </b> </p>
 
 <p> Please contact the M.O.T centre to arrange your annual test </p>
