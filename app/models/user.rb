@@ -50,6 +50,8 @@ class User < ActiveRecord::Base
  #@motdate = Date.parse(mot.mot_date.to_s)
  #@days = (@motdate - @today).to_i
  #@days = @diff.to_i
+ puts Date.today
+ puts mot.mot_date
    if (Date.today + 7) < mot.mot_date
     @thisuser = User.where("id = ?", mot.user_id)
 #      if mot.mot_date-1.day < Time.now.utc
