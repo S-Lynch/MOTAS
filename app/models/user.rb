@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   def User.check_mots
-    require 'date'
+    
 
 #
 #   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
@@ -42,6 +42,7 @@ class User < ActiveRecord::Base
 #    #iterate through each mot abd do the following
 #
    @mots.each do |mot|
+     require 'date'
  # @userid = Mot.select("user_id")
  @days = (mot.mot_date - DateTime.now).to_i
  #@days = @diff.to_i
