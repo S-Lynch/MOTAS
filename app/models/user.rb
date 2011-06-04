@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
  puts @days
  #@days = @diff.to_i
  #  if ((@days < 7) && (@days >= 0))
-  if (Date.today + 7) > mot.mot_date
+  if (Date.today + 7) < mot.mot_date
       @thisuser = User.where("id = ?", mot.user_id)
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
