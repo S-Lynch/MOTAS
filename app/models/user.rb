@@ -44,9 +44,10 @@ class User < ActiveRecord::Base
    @mots.each do |mot|
      require 'date'
  # @userid = Mot.select("user_id")
- days = mot.mot_date - Date.today
+ @today = Date.today
+ @days = mot.mot_date - @today
  #@days = @diff.to_i
-   if ((days < 7) && (days >= 0))
+   if ((@days < 7) && (@days >= 0))
     @thisuser = User.where("id = ?", mot.user_id)
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
