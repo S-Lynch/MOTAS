@@ -45,9 +45,9 @@ class User < ActiveRecord::Base
      require 'date'
      require 'time'
  # @userid = Mot.select("user_id")
- @today = Date.today
+ @today = Date.parse(Date.today.to_s)
  #@motd = mot.mot_date.to_s
- @motdate = Date.parse(mot[0].mot_date.to_s)
+ @motdate = Date.parse(mot.mot_date.to_s)
  @days = (@motdate - @today).to_i
  #@days = @diff.to_i
    if ((@days < 7) && (@days >= 0))
