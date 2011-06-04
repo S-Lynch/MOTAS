@@ -9,7 +9,7 @@
 <h1> Your current e-mail is: </h1> <p> <%=@user.email%></p>
 </td>
 
-<%= link_to "Dont want to forgot you M.O.T, schedule a reminder now", root_path  %>
+<%= link_to "Dont want to forget your M.O.T, schedule a reminder now", root_path  %>
 <td>
       <% unless @user.mots.empty? %>
         <table class="mots" summary="Your booked M.O.T's">
