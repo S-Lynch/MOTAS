@@ -30,7 +30,6 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   def User.check_mots
-    require 'time'
     require 'date'
 
 #
@@ -44,15 +43,15 @@ class User < ActiveRecord::Base
 #
    @mots.each do |mot|
  # @userid = Mot.select("user_id")
- @diff = mot.mot_date - DateTime.now
- @days = @diff.to_i
-   if (@days < 7 && @days > -1)
+ #@diff = mot.mot_date - DateTime.now
+ #@days = @diff.to_i
+ #  if (@days < 7 && @days > -1)
     @thisuser = User.where("id = ?", mot.user_id)
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
 #      MotMailer.deliver_mot_reminder(@mot)
     MotMailer.deliver_mot_reminder(@thisuser, mot)
-   end
+   #end
 #
 #      elsif mot.mot_date-1.day < Time.now.utc
 #    end
