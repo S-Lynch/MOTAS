@@ -38,12 +38,16 @@ class User < ActiveRecord::Base
     @mots = Mot.find(:all)
 #    #iterate through each mot abd do the following
 #
-   @users.each do |user|
- @mot = Mot.find(:user)
+   @mots.each do |mot|
+ # @userid = Mot.select("user_id")
+ @days = (mot.mot_date - DateTime.now).to_i
+   if (@days < 7 && @days > -1)
+    @thisuser = User.where("id = ?", mot.user_id)
 #      if mot.mot_date-1.day < Time.now.utc
 #        #send e-mail
 #      MotMailer.deliver_mot_reminder(@mot)
-       MotMailer.deliver_mot_reminder(user, mot)
+    MotMailer.deliver_mot_reminder(@thisuser, mot)
+   end
 #
 #      elsif mot.mot_date-1.day < Time.now.utc
 #    end
