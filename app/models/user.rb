@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
    @mots.each do |mot|
      require 'date'
  # @userid = Mot.select("user_id")
- @days = (mot.mot_date - DateTime.now).to_i
+ @days = mot.mot_date - Date.today
  #@days = @diff.to_i
    if ((@days < 7) && (@days >= 0))
     @thisuser = User.where("id = ?", mot.user_id)
