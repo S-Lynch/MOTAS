@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
     # @send = User.joins(:mots)
     @users = User.find(:all)
     @mots = Mot.find(:all)
+    #dfs
 #    #iterate through each mot abd do the following
 #
    @mots.each do |mot|
