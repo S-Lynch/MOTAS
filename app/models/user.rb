@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
                         :length => { :within => 5..25 }
                       
 #call the below private method before saving to encrypt the password
+#
   before_save :encrypt_password
 
   def User.check_mots
