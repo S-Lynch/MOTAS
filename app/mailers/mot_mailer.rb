@@ -2,7 +2,7 @@ class MotMailer < ActionMailer::Base
   default :from => "motasreminder@gmail.com"
 
   def mot_reminder(thisuser, mot)
-   # @user = thisuser
+    @user = thisuser
     @mot = mot
     @send = Mot.joins(:users)
     #mail(:to => user.email, :subject => "Your M.O.T renewal is due")
