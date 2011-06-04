@@ -1,5 +1,6 @@
 # require 'digest'
 #require 'rake'
+#
  #validates all data relating to the User that is to be stored and for encrypting and salting the password
 class User < ActiveRecord::Base
   attr_accessor :password, :mot_date
@@ -29,7 +30,8 @@ class User < ActiveRecord::Base
 
   def User.check_mots
     require 'time'
-#
+    require 'date'
+
 #
 #   # @mots = Mot.where(Time.now.utc, Time.now.utc+1.week )
 # #   @mots = Mot.find(:all, :order => "date")
